@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Dogtionary</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <h1>Type a code from 100 to 999:</h1>
+    <form id="myForm" method="post" action="/get-code">
+        <label for="codeInput">Code:</label>
+        <input type="number" id="codeInput" name="code" required>
+        <br>
+        <input type="submit" id="codeButton" value="GET">
+    </form>
+<% if (locals.image) { %>
+    <h2>Meaning:</h2>
+    <div>
+        <img src="<%= image %>" alt="Dogtionary" >
+    </div>
+<% } else {
+
+} %>
+    
+</body>
+
+</html>
