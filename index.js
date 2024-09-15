@@ -19,6 +19,10 @@ app.post("/get-code", async (req, res) => {
         res.render("index.ejs", { image: result.data.image.jpg });
     } catch (error) {
         console.log(error);
+        res.render("index.ejs", { error: "Erro ao buscar o código HTTP." });
+        // setTimeout(() => {
+        //     res.redirect("index.ejs");
+        // }, 3000);
     }
 });
 

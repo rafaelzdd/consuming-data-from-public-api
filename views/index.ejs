@@ -20,9 +20,9 @@
     <div>
         <img src="<%= image %>" alt="Dogtionary" >
     </div>
-<% } else {
-
-} %>
+<% } else if (locals.error) { %>
+    <div> <%= error %> </div>
+<% } %>
     
 </body>
 
